@@ -1,0 +1,1 @@
+import sys; sys.path.append("."); from src.data.fred_connector import FREDConnector; from dotenv import load_dotenv; load_dotenv(); print("Testing FRED API..."); fred = FREDConnector(); gdp = fred.get_common_indicator("gdp", frequency="q"); print(f"GDP data shape: {gdp.shape}"); print(gdp.tail())
